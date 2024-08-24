@@ -55,7 +55,7 @@ struct HorusBinaryPacketV1
     uint8_t     Speed;       // Speed in Knots (1-255 knots)
     uint8_t     Sats;
     int8_t      Temp;        // Twos Complement Temp value.
-    uint8_t     BattVoltage; // 0 = 0.5v, 255 = 5.0V, linear steps in-between.
+    uint8_t     BattVoltage; // 0 = 0v, 255 = 5.0V, linear steps in-between.
     uint16_t    Checksum;    // CRC16-CCITT Checksum.
 }  __attribute__ ((packed));
 
@@ -73,7 +73,7 @@ struct HorusBinaryPacketV2
     uint8_t     Speed;       // Speed in Knots (1-255 knots)
     uint8_t     Sats;
     int8_t      Temp;        // Twos Complement Temp value.
-    uint8_t     BattVoltage; // 0 = 0.5v, 255 = 2.0V, linear steps in-between.
+    uint8_t     BattVoltage; // 0 = 0v, 255 = 5.0V, linear steps in-between.
     // The following 9 bytes (up to the CRC) are user-customizable. The following just
     // provides an example of how they could be used.
     uint8_t     dummy1;      // unsigned int
